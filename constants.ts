@@ -8,9 +8,11 @@ export const COMPANY_INFO: CompanyInfo = {
   taglineEn: "TRANSACTIONS FOLLOW UP SERVICES",
   additional: "TAKHSEES BUSINESSMEN SERVICES L.L.C.",
   location: "الشامخة، أبوظبي",
-  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.2687272837335!2d54.7098883!3d24.3718693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3e5e478416966805%3A0x429a77b700dd29f1!2z2KqY2KXYtdmK2LMg2YTYrtiv2YXYp9iqINix2KzYp9mEINin2YTYudmF2KfZhCDZgS5ZouC5hQ!5e0!3m2!1sen!2sae!4v1708900000000!5m2!1sen!2sae",
+  mapUrl: "https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3634.2687272837335!2d54.7098883!3d24.3718693!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f18!3m3!1m2!1s0x3e5e478416966805%3A0x429a77b700dd29f1!2z2KqY2KXYtdmK2LMg2YTYrtiv2YXYp9iqINix2KzYp9mEINin2YTYudmF2KfZhCDZgS5ZouC5hQ!5e0!3m2!1sar!2sae!4v1708900000000!5m2!1sar!2sae",
+  mapExternal: "https://maps.app.goo.gl/W8sKYhdvTmFAJSwh9?g_st=atm",
   phone: "+971 55 701 1188",
-  whatsapp: "+971557011188"
+  whatsappDisplay: "+971 55 701 1188",
+  whatsappLink: "971557011188"
 };
 
 export const SERVICE_CATEGORIES: ServiceCategory[] = [

@@ -19,8 +19,10 @@ export interface CompanyInfo {
   additional: string;
   location: string;
   mapUrl: string;
+  mapExternal: string;
   phone: string;
-  whatsapp: string;
+  whatsappDisplay: string;
+  whatsappLink: string;
 }
 
 export interface CustomerLead {

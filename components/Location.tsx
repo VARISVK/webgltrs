@@ -44,12 +44,12 @@ const Location: React.FC = () => {
                   <h4 className="text-brand-navy font-bold text-xl">اتصل بنا</h4>
                   <p className="text-gray-600 font-medium text-lg" dir="ltr">{COMPANY_INFO.phone}</p>
                   <a
-                    href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+                    href={`https://wa.me/${COMPANY_INFO.whatsappLink}`}
                     target="_blank"
                     rel="noopener noreferrer"
                     className="text-green-600 font-bold text-sm"
                   >
-                    واتساب: {COMPANY_INFO.whatsapp}
+                    واتساب: {COMPANY_INFO.whatsappDisplay}
                   </a>
                 </div>
               </div>
@@ -67,7 +67,7 @@ const Location: React.FC = () => {
             </div>
 
             <a 
-                href="https://maps.app.goo.gl/W8sKYhdvTmFAJSwh9?g_st=atm"
+                href={COMPANY_INFO.mapExternal}
                 target="_blank"
                 rel="noreferrer"
                 className="inline-block w-full md:w-auto bg-brand-gold hover:bg-brand-goldDark text-white font-bold py-4 px-10 rounded-xl transition-all shadow-lg hover:shadow-xl transform hover:-translate-y-1 text-center mt-4"
@@ -76,11 +76,14 @@ const Location: React.FC = () => {
             </a>
           </motion.div>
 
-          <motion.div 
+          <motion.a 
+            href={COMPANY_INFO.mapExternal}
+            target="_blank"
+            rel="noreferrer"
             initial={{ opacity: 0, y: 50 }}
             whileInView={{ opacity: 1, y: 0 }}
             viewport={{ once: true }}
-            className="h-[450px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white relative group"
+            className="h-[450px] md:h-[600px] rounded-3xl overflow-hidden shadow-2xl border-8 border-white relative group block"
           >
             <iframe
               src={COMPANY_INFO.mapUrl}
@@ -95,7 +98,7 @@ const Location: React.FC = () => {
             
             {/* Aesthetic Overlay */}
             <div className="absolute inset-0 pointer-events-none border-4 border-black/5 rounded-2xl"></div>
-          </motion.div>
+          </motion.a>
         </div>
       </div>
     </section>
