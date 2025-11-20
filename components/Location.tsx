@@ -43,7 +43,14 @@ const Location: React.FC = () => {
                 <div>
                   <h4 className="text-brand-navy font-bold text-xl">اتصل بنا</h4>
                   <p className="text-gray-600 font-medium text-lg" dir="ltr">{COMPANY_INFO.phone}</p>
-                  <p className="text-gray-500 text-sm">متواجدون للرد على استفساراتكم</p>
+                  <a
+                    href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    className="text-green-600 font-bold text-sm"
+                  >
+                    واتساب: {COMPANY_INFO.whatsapp}
+                  </a>
                 </div>
               </div>
 

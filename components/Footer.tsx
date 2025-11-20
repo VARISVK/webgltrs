@@ -8,7 +8,7 @@ const Footer: React.FC = () => {
         <div className="flex flex-col md:flex-row justify-between items-center md:items-start gap-8 text-center md:text-right">
             
             <div className="md:w-1/3">
-                <h2 className="text-3xl font-bold text-white mb-2">{COMPANY_INFO.nameAr}</h2>
+                <h2 className="text-3xl font-bold text-brand-orange mb-2">{COMPANY_INFO.nameAr}</h2>
                 <h3 className="text-brand-gold text-sm font-bold tracking-widest mb-4">{COMPANY_INFO.nameEn}</h3>
                 <p className="text-gray-400 text-sm leading-relaxed max-w-xs mx-auto md:mx-0">
                     شريكك الموثوق لجميع الخدمات الحكومية وخدمات رجال الأعمال في أبوظبي.
@@ -30,6 +30,14 @@ const Footer: React.FC = () => {
                 <div className="flex flex-col gap-2 text-gray-400 text-sm">
                     <p>{COMPANY_INFO.location}</p>
                     <p dir="ltr">{COMPANY_INFO.phone}</p>
+                    <a
+                      className="text-brand-gold hover:text-white transition-colors"
+                      href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+                      target="_blank"
+                      rel="noopener noreferrer"
+                    >
+                      واتساب: {COMPANY_INFO.whatsapp}
+                    </a>
                 </div>
             </div>
         </div>

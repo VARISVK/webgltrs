@@ -19,7 +19,10 @@ const Navbar: React.FC = () => {
   const navLinks = [
     { title: 'الرئيسية', href: '#hero' },
     { title: 'عن الشركة', href: '#about' },
-    { title: 'خدماتنا', href: '#services' },
+    { title: 'القيمة', href: '#highlights' },
+    { title: 'الخدمات', href: '#services' },
+    { title: 'تواصل', href: '#contact' },
+    { title: 'لوحة المتابعة', href: '#admin' },
     { title: 'الموقع', href: '#location' },
   ];
 
@@ -55,14 +58,17 @@ const Navbar: React.FC = () => {
               </a>
             ))}
             
-            <motion.button
+            <motion.a
+              href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
               whileHover={{ scale: 1.05 }}
               whileTap={{ scale: 0.95 }}
               className="bg-brand-navy text-white px-6 py-2.5 rounded-lg font-bold flex items-center gap-2 hover:bg-brand-gold hover:text-brand-navy transition-all shadow-lg shadow-brand-navy/10"
             >
               <Phone size={18} />
-              <span>اتصل بنا</span>
-            </motion.button>
+              <span>واتساب مباشر</span>
+            </motion.a>
           </div>
           
           {/* Logo Section pinned to the top-right */}
@@ -75,13 +81,23 @@ const Navbar: React.FC = () => {
               />
             </div>
             <div className="flex flex-col">
-              <h1 className="text-xl md:text-2xl font-extrabold text-brand-navy leading-tight tracking-tight">
+              <h1 className="text-xl md:text-2xl font-extrabold text-brand-orange leading-tight tracking-tight">
                 {COMPANY_INFO.nameAr}
               </h1>
               <span className="text-xs md:text-sm text-brand-gold font-bold tracking-widest">
                 {COMPANY_INFO.nameEn}
               </span>
             </div>
+            <motion.a
+              href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+              target="_blank"
+              rel="noopener noreferrer"
+              whileHover={{ scale: 1.05 }}
+              className="hidden lg:inline-flex items-center gap-2 bg-[#25D366] text-white px-4 py-2 rounded-xl font-bold shadow-lg shadow-green-500/20"
+            >
+              <Phone size={16} />
+              واتساب
+            </motion.a>
           </div>
         </div>
       </div>
@@ -106,9 +122,14 @@ const Navbar: React.FC = () => {
                   {link.title}
                 </a>
               ))}
-              <button className="bg-brand-gold text-white w-full py-3 rounded-lg font-bold mt-2 shadow-lg shadow-brand-gold/20">
-                اتصل بنا
-              </button>
+              <a
+                href={`https://wa.me/${COMPANY_INFO.whatsapp}`}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="bg-brand-gold text-white w-full py-3 rounded-lg font-bold mt-2 shadow-lg shadow-brand-gold/20 text-center"
+              >
+                تواصل واتساب
+              </a>
             </div>
           </motion.div>
         )}

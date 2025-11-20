@@ -20,4 +20,18 @@ export interface CompanyInfo {
   location: string;
   mapUrl: string;
   phone: string;
+  whatsapp: string;
 }
+
+export interface CustomerLead {
+  id: string;
+  full_name: string;
+  phone: string;
+  service: string;
+  notes?: string;
+  channel?: string;
+  status?: string;
+  created_at: string;
+}
+
+export type LeadPayload = Omit<CustomerLead, 'id' | 'created_at'>;
